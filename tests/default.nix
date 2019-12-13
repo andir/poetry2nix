@@ -1,4 +1,4 @@
-{ pkgs ? import (fetchTarball https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz) {} }:
+{ pkgs ? import (fetchTarball https://github.com/gilligan/nixpkgs/archive/python-testing.tar.gz) {} }:
 let
   poetry = pkgs.callPackage ../pkgs/poetry { python = pkgs.python3; inherit poetry2nix; };
   poetry2nix = import ./.. { inherit pkgs; inherit poetry; };
