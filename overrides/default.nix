@@ -3149,12 +3149,10 @@ lib.composeManyExtensions [
       ruff =
         let
           # generated with
-          # curl https://api.github.com/repos/astral-sh/ruff/releases | \
-          #   jq -r '.[].tag_name' | tr '\n' '\0' | xargs -0 sh -c '
-          #     for version in "$@"; do
-          #       nix_prefetch=$(nix-prefetch-github astral-sh ruff --rev "$version") || exit;
-          #       echo "\"${version#v}\" = \"$(echo "$nix_prefetch" | jq -r ".sha256 // .hash")\";"
-          #     done' _
+          # curl https://api.github.com/repos/astral-sh/ruff/releases | jq -r '.[].tag_name' | tr '\n' '\0' | xargs -n 1 -0 sh -c '
+          #     version="$0"
+          #     nix_prefetch=$(nix-prefetch-github astral-sh ruff --rev "$version") || exit;
+          #     echo "\"${version#v}\" = \"$(echo "$nix_prefetch" | jq -r ".sha256 // .hash")\";"'
           getRepoHash = version: {
             "0.5.1" = "sha256-2tW/p9A7jpQg8ZmSF7KRuN6kBNKK1cfjnS9KlvnCpQA=";
             "0.5.0" = "sha256-OjMoa247om4DLPZ6u0XPMd5L+LYlVzHL39plCCr/fYE=";
