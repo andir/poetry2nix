@@ -3225,6 +3225,30 @@ lib.composeManyExtensions [
           );
 
           getCargoHash = version: {
+            "0.5.4" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.5.1/Cargo.lock
+              lockFile = ./ruff/0.5.4-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                "salsa-0.18.0" = "sha256-gcaAsrrJXrWOIHUnfBwwuTBG1Mb+lUEmIxSGIVLhXaM=";
+              };
+            };
+            "0.5.3" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.5.1/Cargo.lock
+              lockFile = ./ruff/0.5.3-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                "salsa-0.18.0" = "sha256-gcaAsrrJXrWOIHUnfBwwuTBG1Mb+lUEmIxSGIVLhXaM=";
+              };
+            };
+            "0.5.2" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.5.1/Cargo.lock
+              lockFile = ./ruff/0.5.2-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                "salsa-0.18.0" = "sha256-gcaAsrrJXrWOIHUnfBwwuTBG1Mb+lUEmIxSGIVLhXaM=";
+              };
+            };
             "0.5.1" = {
               # https://raw.githubusercontent.com/astral-sh/ruff/0.5.1/Cargo.lock
               lockFile = ./ruff/0.5.1-Cargo.lock;
